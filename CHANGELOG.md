@@ -1,3 +1,13 @@
+# v5.1.1 (Thu Aug 15 2024)
+
+#### 🐛 Bug Fix
+
+- Updates link to README in templates
+  
+#### Authors: 1
+
+- pbillingsby ([@PBillingsby](https://github.com/PBillingsby))
+
 # v5.1.0 (Mon Aug 7 2024)
 
 #### 🚀 Enhancement
