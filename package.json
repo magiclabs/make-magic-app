@@ -1,8 +1,8 @@
 {
-  "name": "make-magic",
+  "name": "make-magic-app",
   "version": "5.1.0",
   "description": "A tool for quickly scaffolding an app with Magic authentication baked-in!",
-  "repository": "magiclabs/create-magic-app",
+  "repository": "magiclabs/make-magic-app",
   "license": "MIT",
   "author": "Magic Labs <team@magic.link>",
   "main": "./dist/core/lib.js",
