@@ -17,9 +17,13 @@ export const definition = {
 
 export default class DedicatedScaffold extends BaseScaffold {
   public templateName = 'nextjs-dedicated-wallet';
+
   private data: Data;
+
   public installationCommand: ExecaCommand = { command: 'npm', args: ['install'] };
+
   public startCommand: ExecaCommand = { command: 'npm', args: ['run', 'dev'] };
+
   public source: string | string[] = [
     './public/favicon.ico',
     './public/logo.svg',

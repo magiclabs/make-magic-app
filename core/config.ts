@@ -6,8 +6,8 @@ import fs from 'fs';
 export const REPO_ROOT = path.resolve(__dirname, '../../');
 
 export const GITHUB_BASE_URL = 'https://github.com';
-export const DEFAULT_CREATE_MAGIC_APP_REPO = 'magiclabs/create-magic-app';
-export const BINARY = 'make-magic';
+export const DEFAULT_CREATE_MAGIC_APP_REPO = 'magiclabs/make-magic-app';
+export const BINARY = 'make-magic-app';
 
 export interface CliConfig {
   shouldTrackUsageData: boolean;
@@ -20,14 +20,16 @@ export const saveConfig = (config: Partial<CliConfig>) => {
   try {
     configCache = config;
     const homedir = os.homedir();
-    const configDir = path.resolve(homedir, '.make-magic');
+    const configDir = path.resolve(homedir, '.make-magic-app');
     if (!fs.existsSync(configDir)) {
       fs.mkdirSync(configDir);
     }
-    const configUrl = path.resolve(homedir, '.make-magic/config');
+    const configUrl = path.resolve(homedir, '.make-magic-app/config');
     const configString = JSON.stringify(config);
     fs.writeFileSync(configUrl, configString);
-  } catch (err) {}
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 export const loadConfig = (): Partial<CliConfig> | undefined => {
@@ -35,7 +37,7 @@ export const loadConfig = (): Partial<CliConfig> | undefined => {
     if (configCache) return configCache;
 
     const homedir = os.homedir();
-    const configUrl = path.resolve(homedir, '.make-magic/config');
+    const configUrl = path.resolve(homedir, '.make-magic-app/config');
     const configString = fs.readFileSync(configUrl, 'utf8');
     const config = JSON.parse(configString);
     configCache = config;

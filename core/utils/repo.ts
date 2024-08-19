@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return */
+/* eslint-disable @typescript-eslint/naming-convention */
 
 /**
  * The utilities in this file are based on the

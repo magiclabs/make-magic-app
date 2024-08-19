@@ -1,4 +1,4 @@
-import { Ora, Spinner } from 'ora';
+import { Ora } from 'ora';
 import {
   AuthTypePrompt,
   BlockchainNetworkPrompt,

@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
-/* eslint-disable no-param-reassign */
-
 import fs from 'fs';
 import { URL } from 'url';
 import path from 'path';
@@ -14,7 +9,7 @@ import { BlockchainNetworkPrompt } from 'scaffolds/prompts';
 import { downloadAndExtractRepo, getRepoInfo } from './utils/repo';
 import { makeDir } from './utils/make-dir';
 import { DEFAULT_CREATE_MAGIC_APP_REPO, GITHUB_BASE_URL } from './config';
-import { getAbsoluteTemplatePath, getRelativeTemplatePath, resolveToDist, resolveToRoot } from './utils/path-helpers';
+import { getAbsoluteTemplatePath, getRelativeTemplatePath, resolveToDist } from './utils/path-helpers';
 import { createProjectDirIfDoesntExists, getScaffoldDefinition } from './utils/scaffold-helpers';
 import { printWarning } from './utils/errors-warnings';
 import { parseFlags } from './flags';
@@ -28,7 +23,7 @@ import { ConsoleMessages } from './cli';
 
 export interface CreateMagicAppData extends BlockchainNetworkPrompt.Data {
   /**
-   * The `make-magic` project branch to source templates from.
+   * The `make-magic-app` project branch to source templates from.
    */
   branch: string;
 

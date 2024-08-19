@@ -220,7 +220,7 @@ export namespace AuthTypePrompt {
       description: `The auth method(s) of your choice. You can provide this flag multiple times to select multiple methods. (one of: ${authMethods
         .map((method) => (method.choices ? method.choices.map((choice) => choice).join(', ') : method.name))
         .join(', ')})`,
-      validate: (value) => {
+      validate: () => {
         const invalid: string[] = [];
 
         if (invalid.length) {

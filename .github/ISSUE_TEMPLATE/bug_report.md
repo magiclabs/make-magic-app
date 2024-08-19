@@ -9,7 +9,7 @@ labels: 🐛 Bug Report, 🔍 Needs Triage
 
 - [ ] Did you perform a cursory search of open issues? Is this bug already reported elsewhere?
 - [ ] Are you running the latest SDK version?
-- [ ] Are you reporting to the correct repository (`make-magic`)?
+- [ ] Are you reporting to the correct repository (`make-magic-app`)?
 
 ### 🐛 Description
 
@@ -37,7 +37,7 @@ labels: 🐛 Bug Report, 🔍 Needs Triage
 
 | Software            | Version(s) |
 | ------------------- | ---------- |
-| `make-magic`        |
+| `make-magic-app`    |
 | Node                |
 | `yarn`              |
 | Operating System    |

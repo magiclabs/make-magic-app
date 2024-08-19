@@ -1,8 +1,5 @@
 #!/usr/bin/env ts-node-script
 
-/* eslint-disable no-param-reassign */
-/* eslint-disable @typescript-eslint/prefer-regexp-exec */
-
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -34,7 +31,7 @@ function getAllFiles(dir: string, recursionState: string[] = []) {
 async function minifyFiles(filePaths: string[]) {
   await Promise.all([
     filePaths.map(async (filePath) => {
-      const { code } = await Terser.minify(await readFilePromise(filePath, 'utf8'), { compress: true });
+      const { code }: any = await Terser.minify(await readFilePromise(filePath, 'utf8'), { compress: true });
       return writeFilePromise(filePath, code);
     }),
   ]);

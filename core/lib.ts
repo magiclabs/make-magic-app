@@ -6,7 +6,7 @@ import { createApp, CreateMagicAppConfig } from './create-app';
  *
  * @see https://magic.link/
  */
-export default async function makeMagic(options: CreateMagicAppConfig = {}) {
+export default async function makeMagicApp(options: CreateMagicAppConfig = {}) {
   const { projectName = 'my-app', template = 'hello-world', branch = 'master', data = {} } = options;
   await createApp({ projectName, template, branch, data });
 }

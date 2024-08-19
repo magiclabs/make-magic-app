@@ -1,11 +1,7 @@
-/* eslint-disable @typescript-eslint/no-namespace */
 /* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
-
 import fs from 'fs';
 import { ExecaCommand } from 'core/types/BaseScaffold';
-import { getAbsoluteTemplatePath, resolveToDist, resolveToRoot } from './path-helpers';
+import { resolveToDist, resolveToRoot } from './path-helpers';
 import type { CreateMagicAppData } from '../create-app';
 import type { Flags, ValueType } from '../flags';
 
