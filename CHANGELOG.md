@@ -1,3 +1,15 @@
+# v5.1.2 (Tue Aug 20 2024)
+
+#### 🐛 Bug Fix
+
+- fix: update versioning [#7](https://github.com/magiclabs/make-magic-app/pull/7) ([@trystendsmyth](https://github.com/trystendsmyth))
+
+#### Authors: 1
+
+- Tristan Smith ([@trystendsmyth](https://github.com/trystendsmyth))
+
+---
+
 # v5.1.1 (Mon Aug 7 2024)
 
 - Updates name, packages, paths and linting
