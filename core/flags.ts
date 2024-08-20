@@ -8,14 +8,14 @@ export type ValueType = string | string[] | number | number[] | boolean;
 type FlagType<T extends ValueType = ValueType> = T extends string
   ? StringConstructor
   : T extends string[]
-  ? [StringConstructor]
-  : T extends number
-  ? NumberConstructor
-  : T extends number[]
-  ? [NumberConstructor]
-  : T extends boolean
-  ? BooleanConstructor
-  : StringConstructor | NumberConstructor | BooleanConstructor;
+    ? [StringConstructor]
+    : T extends number
+      ? NumberConstructor
+      : T extends number[]
+        ? [NumberConstructor]
+        : T extends boolean
+          ? BooleanConstructor
+          : StringConstructor | NumberConstructor | BooleanConstructor;
 
 /**
  * Configuration to modify the behavior of flag-based template data inputs.
@@ -36,7 +36,7 @@ type BaseFlag<T extends ValueType = ValueType> = {
 
   /**
    * A help-text description for this flag. This will be printed along with
-   * global `make-magic` documentation when the respective template is used
+   * global `make-magic-app` documentation when the respective template is used
    * alongside the standard `--help` flag.
    */
   readonly description: string;
@@ -75,8 +75,8 @@ export type Flags<T extends Record<string, ValueType | null | undefined> = Recor
   [P in keyof Required<T>]: undefined extends T[P]
     ? BaseFlag<NonNullable<T[P]>>
     : null extends T[P]
-    ? BaseFlag<NonNullable<T[P]>>
-    : BaseFlagWithRequiredDefault<NonNullable<T[P]>>;
+      ? BaseFlag<NonNullable<T[P]>>
+      : BaseFlagWithRequiredDefault<NonNullable<T[P]>>;
 };
 
 export type TypedFlags<F extends Flags> = F extends Flags<infer R> ? R : unknown;

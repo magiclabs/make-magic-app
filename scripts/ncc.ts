@@ -1,12 +1,9 @@
 #!/usr/bin/env ts-node-script
 
-/* eslint-disable no-await-in-loop */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable import/no-dynamic-require */
-/* eslint-disable global-require */
-
 import path from 'path';
 import fs from 'fs';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore - `@vercel/ncc` is not typed
 import ncc from '@vercel/ncc';
 import parse from 'parse-package-name';
 import bytes from 'bytes';
@@ -22,13 +19,13 @@ const baseDir = path.resolve(__dirname, '..', 'compiled');
 // Cleanup current state of `compiled/*` directory...
 const cleanups = fs.readdirSync(baseDir).filter((i) => fs.statSync(path.join(baseDir, i)).isDirectory());
 for (const dir of cleanups) {
-  fs.rmdirSync(path.join(baseDir, dir), { recursive: true });
+  fs.rmSync(path.join(baseDir, dir), { recursive: true });
 }
 
 // Pre-compile certain node_modules defined in `compiled/config.jsonc`
 const pkgs = JSON5.parse(fs.readFileSync(path.join(baseDir, 'config.jsonc')).toString('utf-8'));
 Promise.all<number>(
-  pkgs.map(async (pkg) => {
+  pkgs.map(async (pkg: any) => {
     await precompileDependency(pkg);
     const footprint = await getDirectorySize(path.join(baseDir, pkg));
     console.log(`✓ ${pkg} (${bytes(footprint)})`);
@@ -82,7 +79,7 @@ async function precompileDependency(input: string) {
    * Once the dependency is built using `@vercel/ncc`,
    * write the output to `[root]/compiled/[pkg.name]`.
    */
-  const postBuild = ({ code }) => {
+  const postBuild = ({ code }: any) => {
     if (!fs.existsSync(destination)) {
       fs.mkdirSync(destination, { recursive: true });
     }

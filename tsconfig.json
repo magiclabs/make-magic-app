@@ -28,6 +28,6 @@
       "yargs-parser": ["compiled/yargs-parser", "node_modules/@types/yargs-parser", "node_modules/yargs-parser"]
     }
   },
-  "include": ["core", "scaffolds", "compiled"],
+  "include": ["core", "scaffolds", "scripts", "compiled"],
   "exclude": ["scaffolds/*/template"]
 }

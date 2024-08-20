@@ -10,10 +10,13 @@ export enum CreateMagicAppErrorCode {
 }
 
 /**
- * Base class representing `make-magic` errors.
+ * Base class representing `make-magic-app` errors.
  */
 export class CreateMagicAppError<Code extends CreateMagicAppErrorCode = CreateMagicAppErrorCode> extends Error {
-  constructor(public readonly code: Code, message?: string) {
+  constructor(
+    public readonly code: Code,
+    message?: string,
+  ) {
     super(chalk`{red Error:} ${message}`);
   }
 }

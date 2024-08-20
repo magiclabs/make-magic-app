@@ -17,9 +17,13 @@ export const definition = {
 
 export default class FlowDedicatedScaffold extends BaseScaffold {
   public templateName = 'nextjs-flow-dedicated-wallet';
+
   private data: Data;
+
   public installationCommand: ExecaCommand = { command: 'npm', args: ['install'] };
+
   public startCommand: ExecaCommand = { command: 'npm', args: ['run', 'dev'] };
+
   public source: string | string[] = [
     './public/favicon.ico',
     './public/logo.svg',

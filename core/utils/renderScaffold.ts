@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-loop-func */
+
 import path from 'path';
 import fs from 'fs';
 import BaseScaffold from 'core/types/BaseScaffold';

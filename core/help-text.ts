@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable consistent-return */
 
-import { c } from 'tar';
 import chalk from 'chalk';
 import decamelize from 'decamelize';
 import wrapAnsi from 'wrap-ansi';
@@ -51,7 +50,9 @@ export function printHelp(globalOptions: Flags, scaffoldName?: string) {
         content: createOptionsTable(flags),
       }),
     );
-  } catch {}
+  } catch (err) {
+    console.error(err);
+  }
 
   // Usage examples
   helpSections.push(
@@ -101,7 +102,7 @@ function createOptionsTable(flags: Record<string, string | Flag>) {
   const maxWidth = 80 - gap;
   const argColumnWidth = Math.max(...rows.map(([arg]) => arg.length));
 
-  const helpTexts = rows.map(([_, helpText]) => formatDescription(helpText, maxWidth, argColumnWidth + gap));
+  const helpTexts = rows.map(([, helpText]) => formatDescription(helpText, maxWidth, argColumnWidth + gap));
 
   return rows.map(([arg], i) => [arg, helpTexts[i]].join(' '.repeat(argColumnWidth - arg.length + gap))).join('\n\n');
 }
