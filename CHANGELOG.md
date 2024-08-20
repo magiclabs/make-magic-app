@@ -1,3 +1,11 @@
+# v5.1.1 (Mon Aug 7 2024)
+
+- Updates name, packages, paths and linting
+
+#### 🚀 Enhancement
+
+- Adds etherlink mainnet
+
 # v5.1.0 (Mon Aug 7 2024)
 
 #### 🚀 Enhancement
@@ -10,7 +18,7 @@
 
 - Removes Universal support with associated flags, prompts, and templates
 - Adds architectural updates to EVM templates
-  
+
 #### Authors: 1
 
 - pbillingsby ([@PBillingsby](https://github.com/PBillingsby))
@@ -20,7 +28,7 @@
 #### 🚀 Enhancement
 
 - Adds Etherlink support
-  
+
 #### Authors: 1
 
 - Hunter Cote ([@hcote](https://github.com/hcote))
@@ -30,7 +38,7 @@
 #### 🚀 Enhancement
 
 - Adds zkSync support
-  
+
 #### Authors: 2
 
 - James ([@jamesrp13](https://github.com/jamesrp13))
@@ -191,7 +199,7 @@
 
 #### 🚀 Enhancement
 
-- * Add microsoft OAuth login [#59](https://github.com/magiclabs/create-magic-app/pull/59) ([@Ethella](https://github.com/Ethella))
+- - Add microsoft OAuth login [#59](https://github.com/magiclabs/create-magic-app/pull/59) ([@Ethella](https://github.com/Ethella))
 
 #### Authors: 1
 
@@ -291,7 +299,7 @@
 
 #### 🐛 Bug Fix
 
-- * change success page link from referral to quickstart [#52](https://github.com/magiclabs/create-magic-app/pull/52) ([@Ethella](https://github.com/Ethella))
+- - change success page link from referral to quickstart [#52](https://github.com/magiclabs/create-magic-app/pull/52) ([@Ethella](https://github.com/Ethella))
 
 #### Authors: 1
 
@@ -710,7 +718,7 @@
 
 #### 🏠 Internal
 
-- Introduce the new package name:  `make-magic` [#8](https://github.com/magiclabs/create-magic-app/pull/8) ([@smithki](https://github.com/smithki))
+- Introduce the new package name: `make-magic` [#8](https://github.com/magiclabs/create-magic-app/pull/8) ([@smithki](https://github.com/smithki))
 
 #### Authors: 1
 
@@ -769,4 +777,3 @@
 - Ian K Smith ([@smithki](https://github.com/smithki))
 
 ---
-
