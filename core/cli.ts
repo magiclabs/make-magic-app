@@ -49,7 +49,7 @@ export const ConsoleMessages = {
   },
 
   gitHubIssuesLink: () => {
-    const msg = chalk`For feedback/questions/issues, please use {rgb(0,255,255) https://github.com/magiclabs/create-magic-app/issues/new/choose}`;
+    const msg = chalk`For feedback/questions/issues, please use {rgb(0,255,255) https://github.com/magiclabs/make-magic-app/issues/new/choose}`;
     return msg;
   },
 };
@@ -70,9 +70,9 @@ async function sayHello() {
   const latestVersion = await getLatestMakeMagicVersion();
   if (currentVersion !== latestVersion) {
     console.log(
-      chalk`{rgb(92,101,246) A new version of {bold make-magic} is available! {rgb(0,255,255) ${currentVersion}} → {rgb(0,255,255) ${latestVersion}}}`,
+      chalk`{rgb(92,101,246) A new version of {bold make-magic-app} is available! {rgb(0,255,255) ${currentVersion}} → {rgb(0,255,255) ${latestVersion}}}`,
     );
-    console.log(chalk`{rgb(92,101,246) Run {rgb(0,255,255) npm i -g make-magic} to update!}\n\n`);
+    console.log(chalk`{rgb(92,101,246) Run {rgb(0,255,255) npm i -g make-magic-app} to update!}\n\n`);
   } else {
     console.log(chalk`\n {dim v${getMakeMagicVersion()}}\n\n`);
   }
@@ -149,7 +149,7 @@ function getMakeMagicVersion() {
 }
 
 async function getLatestMakeMagicVersion() {
-  const latest = await got.get('https://registry.npmjs.org/make-magic/latest');
+  const latest = await got.get('https://registry.npmjs.org/make-magic-app/latest');
 
   return JSON.parse(latest.body).version;
 }

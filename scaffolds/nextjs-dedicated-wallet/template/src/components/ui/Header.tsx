@@ -13,7 +13,7 @@ const Header = () => {
         </div>
       </div>
       <DevLinks />
-      <p className="text-sm font-semibold text-white">Take a look at our <a href="https://github.com/magiclabs/create-magic-app/blob/master/scaffolds/nextjs-dedicated-wallet/template/README.md" target='_blank' className="cursor-pointer text-[#6851ff]">developer guide</a> to learn more about this template</p>
+      <p className="text-sm font-semibold text-white">Take a look at our <a href="https://github.com/magiclabs/make-magic-app/blob/master/scaffolds/nextjs-dedicated-wallet/template/README.md" target='_blank' className="cursor-pointer text-[#6851ff]">developer guide</a> to learn more about this template</p>
     </div>
   );
 };
