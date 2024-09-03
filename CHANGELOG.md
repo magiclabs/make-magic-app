@@ -1,3 +1,15 @@
+# v5.1.3 (Tue Sep 03 2024)
+
+#### 🐛 Bug Fix
+
+- update links and CLI prompt [#8](https://github.com/magiclabs/make-magic-app/pull/8) ([@PBillingsby](https://github.com/PBillingsby))
+
+#### Authors: 1
+
+- pbillingsby ([@PBillingsby](https://github.com/PBillingsby))
+
+---
+
 # v5.1.2 (Tue Aug 20 2024)
 
 #### 🐛 Bug Fix
