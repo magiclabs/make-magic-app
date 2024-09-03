@@ -3,8 +3,8 @@
 > A tool for quickly scaffolding an app with Magic baked-in!
 
 <p align="center">
-  <a href="https://github.com/magiclabs/create-magic-app/blob/master/LICENSE">License</a> ·
-  <a href="https://github.com/magiclabs/create-magic-app/blob/master/CONTRIBUTING.md">Contributing Guide</a>
+  <a href="https://github.com/magiclabs/make-magic-app/blob/master/LICENSE">License</a> ·
+  <a href="https://github.com/magiclabs/make-magic-app/blob/master/CONTRIBUTING.md">Contributing Guide</a>
 </p>
 
 ## 🚀 Usage
