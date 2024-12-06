@@ -1,3 +1,15 @@
+# v5.1.4 (Fri Dec 06 2024)
+
+#### 🐛 Bug Fix
+
+- Create CODEOWNERS [#12](https://github.com/magiclabs/make-magic-app/pull/12) ([@noahyoshida](https://github.com/noahyoshida))
+
+#### Authors: 1
+
+- [@noahyoshida](https://github.com/noahyoshida)
+
+---
+
 # v5.1.3 (Tue Sep 03 2024)
 
 #### 🐛 Bug Fix
